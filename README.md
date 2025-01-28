@@ -2,6 +2,17 @@
 
 This repository contains tools for downloading and processing the SkyScenes dataset into FiftyOne format for easier visualization and analysis.
 
+This dataset is also [available via the Hugging Face Hub](https://huggingface.co/datasets/harpreetsahota/SkyScenes). To download from there:
+
+```python
+import fiftyone as fo
+from fiftyone.utils.huggingface import load_from_hub
+
+# Load the dataset
+# Note: other available arguments include 'max_samples', etc
+dataset = load_from_hub("Voxel51/SkyScenes")
+```
+
 ## SkyScenes Dataset Overview
 
 SkyScenes is a comprehensive synthetic dataset for aerial scene understanding that was recently accepted to ECCV 2024. The dataset contains 33,600 aerial images captured from UAV perspectives using the CARLA simulator.
@@ -23,6 +34,9 @@ Each image comes with dense pixel-level annotations for:
 2. **Pitch Angles**: 0°, 45°, 60°, 90°
 3. **Weather/Time**: Various conditions to test robustness
 4. **Layouts**: Different urban and rural environments
+
+
+
 
 ## Usage
 
